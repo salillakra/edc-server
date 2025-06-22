@@ -2,9 +2,15 @@
   "version": 2,
   "functions": {
     "dist/index.js": {
-      "runtime": "edge"
+      "runtime": "@vercel/node@3"
     }
   },
+  "builds": [
+    {
+      "src": "dist/index.js",
+      "use": "@vercel/node"
+    }
+  ],
   "routes": [
     {
       "src": "/(.*)",
